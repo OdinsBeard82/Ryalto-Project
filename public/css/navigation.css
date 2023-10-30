@@ -1,0 +1,39 @@
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+.home,
+.news,
+.chat,
+.directory,
+.notifications {
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.news {
+    position: relative;
+    font-weight: bold;
+    color: #0d71bd;
+}
+
+.news::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #0d71bd;
+}

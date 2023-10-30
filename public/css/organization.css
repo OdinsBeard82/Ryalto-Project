@@ -1,0 +1,25 @@
+.organization,
+.focused,
+.articles {
+    font-weight: bold;
+    background-color: rgb(221, 221, 221);
+    padding: 20px 20px;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.organization:hover,
+.focused:hover,
+.articles:hover {
+    background-color: #0d71bd;
+}
+
+.focused {
+    background-color: #2799F0;
+}
+
+.organization {
+    border-radius: 10px 0 0 10px;
+}

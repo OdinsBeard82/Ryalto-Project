@@ -1,0 +1,20 @@
+.home,
+.news,
+.chat,
+.directory,
+.notifications {
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.home:hover,
+.news:hover,
+.chat:hover,
+.directory:hover,
+.notifications:hover {
+    background-color: #0d71bd;
+}
