@@ -23,3 +23,8 @@
 .organization {
     border-radius: 10px 0 0 10px;
 }
+
+.articles {
+    border-radius: 0 10px 10px 0;
+}
+

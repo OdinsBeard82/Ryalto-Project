@@ -1,8 +1,23 @@
 .Top {
-    border: 3px solid #caeff9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.title {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: #0d71bd;
+    font-family: "GB Garmond", sans-serif;
+    font-size: 20.8px;
+}
+
 
 button {
     border: none;
     background-color: white;
 }
+

@@ -23,17 +23,19 @@ nav li {
     font-size: 20px;
 }
 
-.news {
-    position: relative;
-    font-weight: bold;
-    color: #0d71bd;
+
+.news:hover {
+background-color: #0d71bd;    
+color: #040404;
 }
 
-.news::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    border-bottom: 2px solid #0d71bd;
+.news {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+    color: #0d71bd; 
 }
