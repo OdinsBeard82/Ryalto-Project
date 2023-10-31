@@ -1,7 +1,7 @@
 .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, auto); 
+    grid-template-rows: repeat(2, auto);
     gap: 20px;
     margin: 20px;
 }
@@ -9,7 +9,7 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    background-color: #fdfdfd;
+    background-color:white;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .card:hover {
@@ -26,12 +27,16 @@
     transform: translate3D(0, -5px, 0) scale(1.03);
 }
 
+.card2 {
+    grid-column: span 2;
+}
+
 .container {
     padding: 16px;
 }
 
 .card img {
-    max-width: 40%;
+    max-width: 20%;
     height: auto;
 }
 
@@ -41,30 +46,40 @@
 
 .card p {
     color: #8e8e8e;
+    display: none;
+    transition: display 0.3s;
 }
 
-.card2 {
-    grid-column: span 2;
+.card:hover p {
+    display: block;
 }
-
 
 .card-content {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.mark-as-read {
+.date-time {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+    bottom: 5px;
+    left: 5px;
+    font-size: 14px;
+    color: #666;
 }
 
-  
-  .hidden-checkbox {
+.likes {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.hidden-checkbox {
     display: none;
-  }
-  
-  .custom-checkbox {
+}
+
+.custom-checkbox {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -72,10 +87,9 @@
     border: 2px solid #0d71bd;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  
-  .custom-checkbox::before {
+}
+
+.custom-checkbox::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -88,37 +102,77 @@
     transition: transform 0.2s ease-in-out;
     opacity: 0;
 }
-  
-  .hidden-checkbox:checked + .custom-checkbox {
-    background-color: #0d71bd;
-  }
-  
-  .label-text {
-    margin-left: 8px;
-    color: #000; 
-  }
-  
-  .custom-checkbox-label {
-    font-size: 16px;
-    color: #333;
-    margin-left: 10px;
-}
-  
-.custom-checkbox:hover {
-    background-color: #f0f0f0;
-}
-
-.custom-checkbox:active {
-    background-color: #e0e0e0;
-}
 
 .hidden-checkbox:checked + .custom-checkbox::before {
-    content: "\2713"; 
+    content: "\2713";
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff; 
-    font-size: 16px; 
-  }
+    color: #fff;
+    font-size: 16px;
+}
+
+.hidden-checkbox:checked + .custom-checkbox {
+    background-color: #0d71bd;
+}
+
+.comment-button {
+    background-color: #0d71bd;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.like-button {
+    background-color: #0d71bd;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.speech-bubble {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.like-emoji,
+.comment-emoji {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.like-count,
+comment-count {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.like-button:active,
+comment-button:active {
+    background-color: #0a569c;
+}
+
+.mark-as-bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
